@@ -5,7 +5,8 @@ var bodyParser=require("body-parser")
 var User = require("./models/user");
 var methodOverride=require("method-override");
 
-mongoose.connect("mongodb+srv://abhishek:abhishek@blog.rsfnj.mongodb.net/<dbname>?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+// mongoose.connect("mongodb+srv://abhishek:abhishek@blog.rsfnj.mongodb.net/<dbname>?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect("mongodb+srv://abhishek:abhishek@blog.rsfnj.mongodb.net/blog?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
