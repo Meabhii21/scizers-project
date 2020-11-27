@@ -1,0 +1,18 @@
+<%-include("partials/header");%>
+<div class="container">
+    <h1>Enter Your Info:</h1>
+    <form action="/" method="POST" onsubmit="ValidateNo();">
+        <div class="form-group index_input">
+            <input id="txtName" class="form-control" type ="text" name="user[name]" placeholder="Enter Name">
+        </div>
+        <div class="form-group index_input">
+            <input id="txtPhoneNo"  onkeypress="return isNumber(event)" class="form-control" type="text" name="user[number]" placeholder="Enter Contact Number">
+        </div>
+        <div class="index_input">
+            <button class="btn btn-block btn-primary ">Submit</button>
+        </div>
+        <a href="/contact">Go-to Contacts </a>
+    </form>
+</div>
+
+<%-include("partials/footer");%>

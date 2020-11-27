@@ -1,0 +1,25 @@
+<%-include("partials/header");%>
+<h1>Contact Detail:</h1>
+    <input type="text" id="myInput" placeholder="Search by name" onkeyup="searchFun()">
+    <table id="myTable">
+        <tr>
+            <th onclick="sortTable()">Name('Click to ascend the names')</th>
+            <th>Contact</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+<% users.forEach(function(user){ %>
+        <tr>
+            <td><%=user.name%></td>
+            <td><%= user.number %></td>
+            <td><a class="btn btn-primary" href="/contact/<%=user._id%>/edit">Edit</a></td>
+            <td><form action="/contact/<%=user._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+<%-include("partials/footer")%>
+    
+

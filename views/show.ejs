@@ -1,0 +1,8 @@
+<h1>Edit Your Info:</h1>
+
+<form action="/contact/<%=user._id%>?_method=PUT" method="POST">
+    <input type ="text" name="profile[name]" value="<%=user.name%>">
+    <input type="text" name="profile[number]" value="<%=user.number%>">
+    <button>Submit</button>
+    
+</form>
