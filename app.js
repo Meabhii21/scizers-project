@@ -24,7 +24,7 @@ app.post("/",function(req,res){
                 res.redirect("/contact");
             
             }else{
-                res.redirect("/contact");
+                res.redirect("/");
             }
         });
     
